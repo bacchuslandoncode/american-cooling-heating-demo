@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/Button";
 import { Kicker } from "@/components/ui/Panel";
 import { Reveal } from "@/components/ui/Reveal";
-import { HeroDiagram } from "@/components/sections/HeroDiagram";
+import { PhotoFrame } from "@/components/ui/PhotoFrame";
 import { EmergencyStrip } from "@/components/sections/EmergencyStrip";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -26,13 +26,14 @@ import { serviceAreas } from "@/data/serviceAreas";
 import { reviews } from "@/data/reviews";
 import { whyChooseUs } from "@/data/whyChooseUs";
 import agingMiniSplits from "@/assets/images/aging-mini-split-condensers.jpg";
+import technicianPressureTest from "@/assets/images/hvac-technician-pressure-test.jpg";
 
 export function Home() {
   return (
     <div>
       {/* Hero */}
       <section className="border-b border-steel-700/60">
-        <div className="container-page grid grid-cols-1 items-center gap-10 py-14 lg:grid-cols-[1.4fr_0.6fr] lg:gap-10 lg:py-20">
+        <div className="container-page grid grid-cols-1 items-center gap-10 py-14 lg:grid-cols-[1.3fr_0.7fr] lg:gap-10 lg:py-20">
           <div>
             <Kicker>Since {siteConfig.founded} &middot; Licensed, Bonded, Insured</Kicker>
             <h1 className="mt-4 text-4xl font-semibold leading-[1.08] md:text-5xl">
@@ -52,9 +53,14 @@ export function Home() {
             </div>
           </div>
           <Reveal>
-            <div className="flex justify-center lg:justify-end">
-              <HeroDiagram />
-            </div>
+            <PhotoFrame
+              photo={{
+                src: technicianPressureTest,
+                alt: "HVAC technician checking system pressure gauges",
+                position: "58% 52%",
+              }}
+              aspect="aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/5]"
+            />
           </Reveal>
         </div>
       </section>
