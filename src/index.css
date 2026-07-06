@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+/*
+  Design system: "Desert Industrial Precision Cooling"
+  Locked page theme: dark graphite/charcoal (deliberate brand choice, not a
+  light/dark toggle - see DESIGN.md). Two accents are intentional: copper for
+  heat/urgency, ice-cyan for cooling/precision. Each has a fixed role; they do
+  not alternate arbitrarily (Color Consistency Lock).
+*/
+@theme {
+  --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Graphite base scale */
+  --color-graphite-950: #0d0f11;
+  --color-graphite-900: #14171a;
+  --color-graphite-800: #1b1f23;
+  --color-graphite-700: #23282d;
+  --color-graphite-600: #2f363c;
+  --color-graphite-500: #3d454c;
+
+  /* Steel borders / hairlines */
+  --color-steel-700: #3a4149;
+  --color-steel-600: #4a545c;
+  --color-steel-400: #7b868f;
+
+  /* Sand / warm off-white (text + rare inverted surfaces) */
+  --color-sand-100: #f6f0e4;
+  --color-sand-200: #ede4d3;
+  --color-sand-400: #c9bfa9;
+  --color-sand-600: #9c937f;
+
+  /* Copper - heat / primary CTA */
+  --color-copper-300: #e0955f;
+  --color-copper-400: #d1793f;
+  --color-copper-500: #c1662f;
+  --color-copper-600: #a3521f;
+  --color-copper-700: #7d3f18;
+
+  /* Ice cyan - cooling / precision */
+  --color-ice-300: #a8e6ef;
+  --color-ice-400: #7fd0dc;
+  --color-ice-500: #5cb8c7;
+  --color-ice-600: #3f93a1;
+
+  --radius-panel: 3px;
+  --radius-control: 7px;
+
+  --shadow-panel: 0 1px 0 0 rgba(246, 240, 228, 0.04) inset, 0 12px 32px -16px rgba(0,0,0,0.55);
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-graphite-900 text-sand-100 font-body antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-sand-100;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--color-copper-500);
+    color: var(--color-graphite-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ice-400);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-[1360px] px-5 md:px-8;
+  }
+
+  .hairline {
+    @apply border-steel-700/60;
+  }
+
+  .tick-grid {
+    background-image: linear-gradient(rgba(246,240,228,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(246,240,228,0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

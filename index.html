@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#14171a" />
+    <title>American Cooling And Heating | Arizona AC, Heating &amp; Precision Cooling</title>
+    <meta
+      name="description"
+      content="Residential, commercial, and industrial HVAC in the Phoenix Valley since 1993. AC repair, installation, maintenance, precision cooling, and cooling towers. Licensed, bonded, insured, BBB A+ rated."
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!--
+      Netlify Forms static detector: keep in sync with src/pages/Contact.tsx.
+      This inert form is never rendered to users; it lets Netlify's build-time
+      HTML scan register the form name/fields since the real form is client-rendered.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="company" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="topic" />
+      <textarea name="message"></textarea>
+      <input type="text" name="company" />
+    </form>
+  </body>
+</html>
