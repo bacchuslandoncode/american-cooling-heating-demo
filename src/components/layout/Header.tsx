@@ -3,6 +3,7 @@ import { Link, NavLink as RouterNavLink } from "react-router-dom";
 import { List, X, Phone, CaretDown, ClipboardText } from "@phosphor-icons/react";
 import { primaryNav, isNavGroup, ctas } from "@/data/siteConfig";
 import { cn } from "@/lib/cn";
+import logo from "@/assets/images/acg-logo-2017.webp";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -11,14 +12,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-steel-700/60 bg-graphite-900/95 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-4 md:h-[68px]">
-        <Link to="/" className="flex items-center gap-2.5 shrink-0" onClick={() => setMobileOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-[3px] border border-steel-600 bg-graphite-800 font-mono text-sm font-medium text-copper-400">
-            AC
-          </span>
-          <span className="hidden font-display text-sm font-semibold leading-tight text-sand-100 sm:block">
-            American Cooling
-            <br className="hidden lg:block" /> And Heating
-          </span>
+        <Link to="/" className="flex shrink-0 items-center" onClick={() => setMobileOpen(false)}>
+          <img
+            src={logo}
+            alt="American Cooling And Heating"
+            className="h-10 w-auto md:h-12"
+            width={1538}
+            height={1000}
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

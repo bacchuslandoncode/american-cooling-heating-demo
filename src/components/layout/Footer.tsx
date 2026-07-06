@@ -4,6 +4,7 @@ import { siteConfig } from "@/data/siteConfig";
 import { brands } from "@/data/products";
 import { serviceAreas } from "@/data/serviceAreas";
 import { Divider } from "@/components/ui/Panel";
+import logo from "@/assets/images/acg-logo-2017.webp";
 
 const resourceLinks = [
   { label: "FAQs", href: "/resources/faqs" },
@@ -26,8 +27,8 @@ export function Footer() {
     <footer className="border-t border-steel-700/60 bg-graphite-950">
       <div className="container-page grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-6 lg:gap-8">
         <div className="lg:col-span-2">
-          <span className="font-display text-lg font-semibold text-sand-100">American Cooling And Heating</span>
-          <p className="mt-3 max-w-[38ch] text-sm leading-relaxed text-steel-400">
+          <img src={logo} alt="American Cooling And Heating" className="h-12 w-auto" width={1538} height={1000} />
+          <p className="mt-4 max-w-[38ch] text-sm leading-relaxed text-steel-400">
             Residential, commercial, and industrial HVAC across the Phoenix Valley since {siteConfig.founded}.
             Licensed, bonded, and insured.
           </p>
