@@ -21,14 +21,14 @@ export function ResourcesHub() {
         title="Straight Answers, No Sales Pitch"
         subhead="Reference material for homeowners and facility managers trying to understand what they're being told before they agree to it."
       />
-      <div className="container-page grid grid-cols-1 gap-px overflow-hidden rounded-[3px] border border-steel-700/60 bg-steel-700/60 py-0 sm:grid-cols-2 lg:grid-cols-3 my-14 md:my-20">
+      <div className="container-page grid grid-cols-1 gap-px overflow-hidden rounded-[3px] border border-border bg-border py-0 sm:grid-cols-2 lg:grid-cols-3 my-14 md:my-20">
         {links.map((l) => (
-          <Link key={l.href} to={l.href} className="group flex flex-col justify-between gap-6 bg-graphite-800 p-6 hover:bg-graphite-700">
+          <Link key={l.href} to={l.href} className="group flex flex-col justify-between gap-6 bg-card p-6 hover:bg-ice">
             <div>
-              <h2 className="font-display text-lg font-medium text-sand-100">{l.label}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-steel-400">{l.detail}</p>
+              <h2 className="font-display text-lg font-medium text-ink">{l.label}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{l.detail}</p>
             </div>
-            <ArrowUpRight size={16} className="text-steel-400 group-hover:text-copper-400" />
+            <ArrowUpRight size={16} className="text-muted group-hover:text-brand" />
           </Link>
         ))}
       </div>

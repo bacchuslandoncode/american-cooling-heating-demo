@@ -22,14 +22,14 @@ export function ProductsHub() {
       />
       <div className="container-page py-14 md:py-20">
         <BrandGrid items={brands} />
-        <div className="mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-[3px] border border-steel-700/60 bg-steel-700/60 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-px overflow-hidden rounded-[3px] border border-border bg-border sm:grid-cols-2">
           {specialtyPages.map((p) => (
-            <Link key={p.href} to={p.href} className="group flex items-center justify-between gap-4 bg-graphite-800 p-6 hover:bg-graphite-700">
+            <Link key={p.href} to={p.href} className="group flex items-center justify-between gap-4 bg-card p-6 hover:bg-ice">
               <div>
-                <p className="font-display text-base font-medium text-sand-100">{p.label}</p>
-                <p className="mt-1 text-sm text-steel-400">{p.detail}</p>
+                <p className="font-display text-base font-medium text-ink">{p.label}</p>
+                <p className="mt-1 text-sm text-muted">{p.detail}</p>
               </div>
-              <ArrowUpRight size={16} className="shrink-0 text-steel-400 group-hover:text-copper-400" />
+              <ArrowUpRight size={16} className="shrink-0 text-muted group-hover:text-brand" />
             </Link>
           ))}
         </div>

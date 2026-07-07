@@ -49,25 +49,25 @@ export function Contact() {
       <section className="pb-20">
         <div className="container-page grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-8">
-            <div className="flex flex-col gap-5 rounded-[3px] border border-steel-700/60 bg-graphite-800 p-6">
+            <div className="flex flex-col gap-5 rounded-[3px] border border-border bg-card p-6">
               <Button href={ctas.call.href} size="md" icon={<Phone size={15} weight="fill" />} className="w-full sm:w-auto">
                 {ctas.call.label}
               </Button>
-              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 text-sand-200 hover:text-ice-300">
-                <EnvelopeSimple size={18} className="text-copper-400" /> {siteConfig.email}
+              <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 text-ink hover:text-brand">
+                <EnvelopeSimple size={18} className="text-brand" /> {siteConfig.email}
               </a>
-              <div className="flex items-start gap-3 text-sand-400">
-                <MapPin size={18} className="mt-0.5 shrink-0 text-copper-400" />
+              <div className="flex items-start gap-3 text-muted">
+                <MapPin size={18} className="mt-0.5 shrink-0 text-brand" />
                 <span>
                   {siteConfig.address.line1}, {siteConfig.address.city}, {siteConfig.address.state}{" "}
                   {siteConfig.address.zip}
                 </span>
               </div>
-              <p className="text-sm text-steel-400">{siteConfig.serviceHoursNote}</p>
+              <p className="text-sm text-muted">{siteConfig.serviceHoursNote}</p>
             </div>
 
-            <div className="flex items-start gap-3 rounded-[3px] border border-steel-700/60 bg-graphite-800/60 p-4 text-sm leading-relaxed text-steel-400">
-              <Info size={16} className="mt-0.5 shrink-0 text-ice-400" />
+            <div className="flex items-start gap-3 rounded-[3px] border border-border bg-ice p-4 text-sm leading-relaxed text-ink/80">
+              <Info size={16} className="mt-0.5 shrink-0 text-brand" />
               <span>{siteConfig.sameDayNote} Pricing is quoted flat-rate and up front, before any work starts.</span>
             </div>
 
@@ -79,7 +79,7 @@ export function Contact() {
             onSubmit={handleSubmit}
             data-netlify="true"
             netlify-honeypot="company"
-            className="space-y-5 rounded-[3px] border border-steel-700/60 bg-graphite-800 p-6 md:p-8"
+            className="space-y-5 rounded-[3px] border border-border bg-card p-6 md:p-8"
           >
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
@@ -94,14 +94,14 @@ export function Contact() {
             </div>
             <Field label="Email" name="email" type="email" required />
             <div>
-              <label className="mb-2 block text-sm font-medium text-sand-200" htmlFor="topic">
+              <label className="mb-2 block text-sm font-medium text-ink" htmlFor="topic">
                 What do you need?
               </label>
               <select
                 id="topic"
                 name="topic"
                 required
-                className="w-full rounded-[7px] border border-steel-600 bg-graphite-900 px-4 py-2.5 text-sm text-sand-100 focus:border-ice-400"
+                className="w-full rounded-[7px] border border-border bg-canvas px-4 py-2.5 text-sm text-ink focus:border-brand"
               >
                 <option value="">Select one</option>
                 <option>Emergency repair</option>
@@ -113,7 +113,7 @@ export function Contact() {
               </select>
             </div>
             <div>
-              <label className="mb-2 block text-sm font-medium text-sand-200" htmlFor="message">
+              <label className="mb-2 block text-sm font-medium text-ink" htmlFor="message">
                 Message
               </label>
               <textarea
@@ -121,13 +121,13 @@ export function Contact() {
                 name="message"
                 rows={4}
                 required
-                className="w-full rounded-[7px] border border-steel-600 bg-graphite-900 px-4 py-2.5 text-sm text-sand-100 placeholder:text-steel-500 focus:border-ice-400"
+                className="w-full rounded-[7px] border border-border bg-canvas px-4 py-2.5 text-sm text-ink placeholder:text-muted focus:border-brand"
                 placeholder="System type, brand if known, and what's happening"
               />
             </div>
 
             {status === "success" ? (
-              <div className="flex items-center gap-2 rounded-[3px] border border-ice-500/40 bg-ice-500/10 p-4 text-sm text-ice-300">
+              <div className="flex items-center gap-2 rounded-[3px] border border-brand/30 bg-ice p-4 text-sm text-brand">
                 <CheckCircle size={18} weight="fill" />
                 Request received. Expect a call back shortly, or call directly for anything urgent.
               </div>
@@ -137,7 +137,7 @@ export function Contact() {
               </Button>
             )}
             {status === "error" && (
-              <p className="text-sm text-copper-400">Something went wrong. Please call {siteConfig.phone} instead.</p>
+              <p className="text-sm text-emergency">Something went wrong. Please call {siteConfig.phone} instead.</p>
             )}
           </form>
         </div>
@@ -159,7 +159,7 @@ function Field({
 }) {
   return (
     <div>
-      <label className="mb-2 block text-sm font-medium text-sand-200" htmlFor={name}>
+      <label className="mb-2 block text-sm font-medium text-ink" htmlFor={name}>
         {label}
       </label>
       <input
@@ -167,7 +167,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-[7px] border border-steel-600 bg-graphite-900 px-4 py-2.5 text-sm text-sand-100 focus:border-ice-400"
+        className="w-full rounded-[7px] border border-border bg-canvas px-4 py-2.5 text-sm text-ink focus:border-brand"
       />
     </div>
   );

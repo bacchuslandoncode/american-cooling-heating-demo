@@ -11,10 +11,10 @@ export function BrandGrid({ items }: { items: Brand[] }) {
         <Link
           key={brand.slug}
           to={`/products/${brand.slug}`}
-          className="group flex flex-col gap-4 rounded-[3px] border border-steel-700/60 bg-graphite-800 p-6 transition-colors hover:border-ice-500/50 hover:bg-graphite-700"
+          className="group flex flex-col gap-4 rounded-[3px] border border-border bg-card p-6 transition-colors hover:border-cooling hover:bg-ice"
         >
-          <span className="font-display text-lg font-semibold text-sand-100 group-hover:text-copper-400">{brand.name}</span>
-          <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-steel-400">{brand.scope}</span>
+          <span className="font-display text-lg font-semibold text-ink group-hover:text-brand">{brand.name}</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-muted">{brand.scope}</span>
         </Link>
       ))}
     </div>

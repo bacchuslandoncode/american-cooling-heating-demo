@@ -32,14 +32,14 @@ export function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="border-b border-steel-700/60">
+      <section className="border-b border-border">
         <div className="container-page grid grid-cols-1 items-center gap-10 py-14 lg:grid-cols-[1.3fr_0.7fr] lg:gap-10 lg:py-20">
           <div>
             <Kicker>Since {siteConfig.founded} &middot; Licensed, Bonded, Insured</Kicker>
             <h1 className="mt-4 text-4xl font-semibold leading-[1.08] md:text-5xl">
               Fast Arizona AC Repair, Replacement, and Precision Cooling
             </h1>
-            <p className="mt-6 max-w-[46ch] text-base leading-relaxed text-sand-400 md:text-lg">
+            <p className="mt-6 max-w-[46ch] text-base leading-relaxed text-muted md:text-lg">
               Residential, commercial, and industrial HVAC across the Phoenix Valley since 1993, built around fast
               dispatch and systems sized right.
             </p>
@@ -69,7 +69,7 @@ export function Home() {
       <TrustBar />
 
       {/* Services split by category */}
-      <section className="border-b border-steel-700/60 py-16 md:py-24">
+      <section className="border-b border-border py-16 md:py-24">
         <div className="container-page">
           <Kicker>What We Service</Kicker>
           <h2 className="mt-3 max-w-[24ch] text-3xl font-semibold md:text-4xl">
@@ -78,7 +78,7 @@ export function Home() {
           <div className="mt-10 space-y-12">
             <Reveal>
               <div>
-                <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-steel-400">Residential</h3>
+                <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-muted">Residential</h3>
                 <FeaturedServices
                   featured={getServiceBySlug("24-7-ac-service")!}
                   items={servicesByCategory("residential").filter((s) => s.slug !== "24-7-ac-service")}
@@ -87,13 +87,13 @@ export function Home() {
             </Reveal>
             <Reveal delay={0.06}>
               <div>
-                <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-steel-400">Commercial</h3>
+                <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-muted">Commercial</h3>
                 <ServicesGrid items={servicesByCategory("commercial")} />
               </div>
             </Reveal>
             <Reveal delay={0.12}>
               <div>
-                <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-steel-400">Precision &amp; Industrial</h3>
+                <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.14em] text-muted">Precision &amp; Industrial</h3>
                 <ServicesGrid items={servicesByCategory("precision")} />
               </div>
             </Reveal>
@@ -143,13 +143,13 @@ export function Home() {
 
       {/* Commercial / precision capability */}
       <Reveal>
-        <section className="border-b border-steel-700/60 py-16 md:py-24">
+        <section className="border-b border-border py-16 md:py-24">
           <div className="container-page">
-            <Kicker tone="ice">Beyond The House</Kicker>
+            <Kicker tone="cooling">Beyond The House</Kicker>
             <h2 className="mt-3 max-w-[26ch] text-3xl font-semibold md:text-4xl">
               Data Centers, Cooling Towers, And Mission-Critical Uptime
             </h2>
-            <p className="mt-4 max-w-[62ch] text-sand-400">
+            <p className="mt-4 max-w-[62ch] text-muted">
               Precision cooling for server rooms, Liebert CRAC support, and cooling tower or fluid cooler service for
               commercial chiller plants, the same equipment classes most residential contractors don't touch.
             </p>
@@ -173,11 +173,11 @@ export function Home() {
       </Reveal>
 
       {/* Offers */}
-      <section className="border-b border-steel-700/60 py-16 md:py-24">
+      <section className="border-b border-border py-16 md:py-24">
         <div className="container-page">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <h2 className="max-w-[24ch] text-3xl font-semibold md:text-4xl">Ways To Save On The Work That Matters</h2>
-            <Link to={ctas.financing.href} className="flex shrink-0 items-center gap-1.5 text-sm font-medium text-ice-400 hover:text-ice-300">
+            <Link to={ctas.financing.href} className="flex shrink-0 items-center gap-1.5 text-sm font-medium text-brand hover:text-brand-dark">
               <PiggyBank size={16} />
               {ctas.financing.label}
               <ArrowUpRight size={13} />
@@ -197,7 +197,7 @@ export function Home() {
       </section>
 
       {/* Brands */}
-      <section className="border-b border-steel-700/60 py-16 md:py-24">
+      <section className="border-b border-border py-16 md:py-24">
         <div className="container-page">
           <h2 className="max-w-[24ch] text-3xl font-semibold md:text-4xl">Every Major Brand, One Warranty Standard</h2>
           <div className="mt-8">
@@ -207,7 +207,7 @@ export function Home() {
       </section>
 
       {/* Service areas */}
-      <section className="border-b border-steel-700/60 py-16 md:py-24">
+      <section className="border-b border-border py-16 md:py-24">
         <div className="container-page">
           <h2 className="max-w-[24ch] text-3xl font-semibold md:text-4xl">Valleywide, With A Gilbert Home Base</h2>
           <div className="mt-8">
@@ -217,7 +217,7 @@ export function Home() {
       </section>
 
       {/* Reviews */}
-      <section className="border-b border-steel-700/60 py-16 md:py-24">
+      <section className="border-b border-border py-16 md:py-24">
         <div className="container-page">
           <Kicker>Reviews</Kicker>
           <h2 className="mt-3 max-w-[24ch] text-3xl font-semibold md:text-4xl">What The Valley Says After The Job's Done</h2>

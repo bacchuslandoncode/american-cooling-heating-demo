@@ -46,18 +46,18 @@ export function About() {
           "NATE certified technicians",
         ]}
       />
-      <section className="border-b border-steel-700/60 py-14 md:py-20">
+      <section className="border-b border-border py-14 md:py-20">
         <div className="container-page flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
             <h2 className="max-w-[26ch] text-2xl font-semibold md:text-3xl">Warranty & Guarantee Terms</h2>
-            <p className="mt-3 max-w-[52ch] text-sm text-sand-400">
+            <p className="mt-3 max-w-[52ch] text-sm text-muted">
               A three-year repair warranty, a lifetime install workmanship warranty, and a written guarantee behind
               both.
             </p>
           </div>
           <Link
             to="/quality-guarantee"
-            className="flex shrink-0 items-center gap-2 rounded-full border border-steel-600 px-5 py-2.5 text-sm font-medium text-sand-100 hover:border-ice-400 hover:text-ice-300"
+            className="flex shrink-0 items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-ink hover:border-brand hover:text-brand"
           >
             Full Quality Guarantee
             <ArrowUpRight size={14} />

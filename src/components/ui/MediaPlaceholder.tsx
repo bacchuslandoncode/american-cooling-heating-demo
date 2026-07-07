@@ -20,14 +20,14 @@ export function MediaPlaceholder({
   return (
     <div
       className={cn(
-        "tick-grid relative flex flex-col items-center justify-center gap-3 overflow-hidden rounded-[3px] border border-steel-700/60 bg-graphite-800 p-8 text-center",
+        "tick-grid relative flex flex-col items-center justify-center gap-3 overflow-hidden rounded-[3px] border border-border bg-ice p-8 text-center",
         aspect,
         className
       )}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-graphite-900/80 via-transparent to-transparent" />
-      <IconCmp size={28} weight="light" className="relative text-steel-400" />
-      <p className="relative max-w-[22ch] font-mono text-[11px] uppercase tracking-[0.12em] text-steel-400">
+      <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
+      <IconCmp size={28} weight="light" className="relative text-brand" />
+      <p className="relative max-w-[22ch] font-mono text-[11px] uppercase tracking-[0.12em] text-muted">
         {label}
       </p>
     </div>

@@ -34,7 +34,7 @@ export function OfferDetail() {
             href={offer.externalLink.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-ice-400 hover:text-ice-300"
+            className="inline-flex items-center gap-2 text-sm font-medium text-brand hover:text-brand-dark"
           >
             {offer.externalLink.label}
             <ArrowUpRight size={14} />

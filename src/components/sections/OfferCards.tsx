@@ -9,13 +9,13 @@ export function OfferCards({ items }: { items: OfferPage[] }) {
         <Link
           key={offer.slug}
           to={`/specials/${offer.slug}`}
-          className="group flex flex-col justify-between gap-6 rounded-[3px] border border-steel-700/60 bg-graphite-800 p-6 hover:border-ice-500/50"
+          className="group flex flex-col justify-between gap-6 rounded-[3px] border border-border bg-card p-6 hover:border-cooling"
         >
           <div>
-            <h3 className="font-display text-lg font-medium text-sand-100">{offer.navLabel}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-steel-400">{offer.subhead}</p>
+            <h3 className="font-display text-lg font-medium text-ink">{offer.navLabel}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{offer.subhead}</p>
           </div>
-          <span className="flex items-center gap-1.5 text-sm text-copper-400">
+          <span className="flex items-center gap-1.5 text-sm text-brand">
             Details <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </span>
         </Link>

@@ -19,8 +19,8 @@ export function ContextualCTA({ label, action = "call" }: { label: string; actio
 
   return (
     <section className="py-10">
-      <div className="container-page flex flex-col items-start justify-between gap-4 border-t border-steel-700/60 pt-8 sm:flex-row sm:items-center">
-        <p className="max-w-[42ch] text-sm text-sand-400">{label}</p>
+      <div className="container-page flex flex-col items-start justify-between gap-4 border-t border-border pt-8 sm:flex-row sm:items-center">
+        <p className="max-w-[42ch] text-sm text-muted">{label}</p>
         <Button href={cta.href} size="md" icon={<Icon size={15} weight={action === "call" ? "fill" : "regular"} />}>
           {cta.label}
         </Button>

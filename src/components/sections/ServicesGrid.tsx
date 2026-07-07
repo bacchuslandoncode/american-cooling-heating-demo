@@ -20,22 +20,22 @@ export function ServicesGrid({ items }: { items: ServicePage[] }) {
             key={service.slug}
             to={`/services/${service.slug}`}
             className={cn(
-              "group rounded-[3px] border border-steel-700/60 bg-graphite-800 p-6 transition-colors hover:border-ice-500/50 hover:bg-graphite-700",
+              "group rounded-[3px] border border-border bg-card p-6 transition-colors hover:border-cooling hover:bg-ice",
               solo ? "flex items-center gap-6" : "flex flex-col justify-between gap-8"
             )}
           >
             <div className={cn("flex items-center gap-3", !solo && "w-full items-start justify-between")}>
-              <Icon size={solo ? 30 : 22} weight="light" className="shrink-0 text-ice-400" />
+              <Icon size={solo ? 30 : 22} weight="light" className="shrink-0 text-brand" />
               {!solo && (
-                <ArrowUpRight size={16} className="text-steel-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-copper-400" />
+                <ArrowUpRight size={16} className="text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand" />
               )}
             </div>
             <div>
-              <h3 className="font-display text-base font-medium text-sand-100">{service.navLabel}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-steel-400">{service.summary}</p>
+              <h3 className="font-display text-base font-medium text-ink">{service.navLabel}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{service.summary}</p>
             </div>
             {solo && (
-              <ArrowUpRight size={18} className="ml-auto shrink-0 text-steel-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-copper-400" />
+              <ArrowUpRight size={18} className="ml-auto shrink-0 text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand" />
             )}
           </Link>
         );

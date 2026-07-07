@@ -10,7 +10,7 @@ export function HeatPumpGuide() {
   return (
     <div>
       <Breadcrumbs trail={[{ label: "Resources", href: "/resources" }, { label: "Heat Pump Guide" }]} />
-      <PageHero kicker="Heat Pump Guide" tone="ice" title={heatPumpGuide.headline} subhead={heatPumpGuide.summary} />
+      <PageHero kicker="Heat Pump Guide" tone="cooling" title={heatPumpGuide.headline} subhead={heatPumpGuide.summary} />
       <SplitFeature
         heading="One Unit, Two Jobs"
         body="A heat pump installation looks like a standard outdoor condenser, but the reversing valve inside means the same unit pulls heat out of the house in summer and pulls heat into it in winter."

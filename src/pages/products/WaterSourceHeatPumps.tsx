@@ -10,7 +10,7 @@ export function WaterSourceHeatPumps() {
   return (
     <div>
       <Breadcrumbs trail={[{ label: "Products & Brands", href: "/products" }, { label: "Water Source Heat Pumps" }]} />
-      <PageHero kicker="Water Source Heat Pumps" tone="ice" title={d.headline} subhead={d.summary} />
+      <PageHero kicker="Water Source Heat Pumps" tone="cooling" title={d.headline} subhead={d.summary} />
       <KeyPoints heading="Service Scope" items={d.points} />
       <EquipmentGrid heading="Brands Serviced" items={d.brandsServiced} />
       <ContextualCTA label="Ask whether a water source system fits your building's loop." action="estimate" />

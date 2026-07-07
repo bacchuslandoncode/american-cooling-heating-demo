@@ -19,17 +19,17 @@ export function SplitFeature({
   reverse?: boolean;
 }) {
   return (
-    <section className="border-b border-steel-700/60 py-14 md:py-20">
+    <section className="border-b border-border py-14 md:py-20">
       <div className="container-page grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className={cn(reverse && "lg:order-2")}>
           <h2 className="max-w-[22ch] text-2xl font-semibold md:text-3xl">{heading}</h2>
-          <p className="mt-4 max-w-[52ch] text-sm leading-relaxed text-sand-400 md:text-base">{body}</p>
+          <p className="mt-4 max-w-[52ch] text-sm leading-relaxed text-muted md:text-base">{body}</p>
           {bullets && (
             <ul className="mt-6 space-y-3">
               {bullets.map((b) => (
                 <li key={b} className="flex items-start gap-3">
-                  <CheckCircle size={17} weight="fill" className="mt-0.5 shrink-0 text-copper-400" />
-                  <span className="text-sm text-sand-200">{b}</span>
+                  <CheckCircle size={17} weight="fill" className="mt-0.5 shrink-0 text-brand" />
+                  <span className="text-sm text-ink">{b}</span>
                 </li>
               ))}
             </ul>

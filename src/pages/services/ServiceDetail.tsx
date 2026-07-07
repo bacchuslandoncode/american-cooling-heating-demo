@@ -37,7 +37,7 @@ export function ServiceDetail() {
       <Breadcrumbs trail={[{ label: "Services", href: "/services" }, { label: service.navLabel }]} />
       <PageHero
         kicker={service.kicker}
-        tone={service.category === "precision" ? "ice" : "copper"}
+        tone={service.category === "precision" ? "cooling" : "brand"}
         title={service.headline}
         subhead={service.subhead}
       />

@@ -15,15 +15,15 @@ export function ServicesHub() {
       />
       <div className="container-page space-y-14 py-14 md:py-20">
         <div>
-          <h2 className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-steel-400">Residential</h2>
+          <h2 className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-muted">Residential</h2>
           <ServicesGrid items={servicesByCategory("residential")} />
         </div>
         <div>
-          <h2 className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-steel-400">Commercial</h2>
+          <h2 className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-muted">Commercial</h2>
           <ServicesGrid items={servicesByCategory("commercial")} />
         </div>
         <div>
-          <h2 className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-steel-400">Precision &amp; Industrial</h2>
+          <h2 className="mb-5 font-mono text-xs uppercase tracking-[0.14em] text-muted">Precision &amp; Industrial</h2>
           <ServicesGrid items={servicesByCategory("precision")} />
         </div>
       </div>

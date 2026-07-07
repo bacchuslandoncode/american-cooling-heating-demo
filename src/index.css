@@ -10,77 +10,73 @@
 @import "@fontsource/ibm-plex-mono/500.css";
 
 /*
-  Design system: "Desert Industrial Precision Cooling"
-  Locked page theme: dark graphite/charcoal (deliberate brand choice, not a
-  light/dark toggle - see DESIGN.md). Two accents are intentional: copper for
-  heat/urgency, ice-cyan for cooling/precision. Each has a fixed role; they do
-  not alternate arbitrarily (Color Consistency Lock).
+  Design system: "Arizona Cooling, Bright Premium"
+  Locked page theme: light and warm (deliberate brand choice - see
+  CONTENT_COVERAGE.md/design notes). Brand blue carries headings, nav, and
+  text accents; cooling blue is reserved for primary CTAs; emergency red is
+  reserved for urgent/dispatch messaging only (Color Consistency Lock).
 */
 @theme {
   --font-display: "Space Grotesk", "IBM Plex Sans", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
 
-  /* Graphite base scale */
-  --color-graphite-950: #0d0f11;
-  --color-graphite-900: #14171a;
-  --color-graphite-800: #1b1f23;
-  --color-graphite-700: #23282d;
-  --color-graphite-600: #2f363c;
-  --color-graphite-500: #3d454c;
+  /* Base surfaces */
+  --color-canvas: #f7f4ed;
+  --color-card: #ffffff;
 
-  /* Steel borders / hairlines */
-  --color-steel-700: #3a4149;
-  --color-steel-600: #4a545c;
-  --color-steel-400: #7b868f;
+  /* Text */
+  --color-ink: #1f2f3a;
+  --color-muted: #66737c;
 
-  /* Sand / warm off-white (text + rare inverted surfaces) */
-  --color-sand-100: #f6f0e4;
-  --color-sand-200: #ede4d3;
-  --color-sand-400: #c9bfa9;
-  --color-sand-600: #9c937f;
+  /* Brand blue - headings, nav, primary text accents */
+  --color-brand: #1f5e73;
+  --color-brand-dark: #17495a;
 
-  /* Copper - heat / primary CTA */
-  --color-copper-300: #e0955f;
-  --color-copper-400: #d1793f;
-  --color-copper-500: #c1662f;
-  --color-copper-600: #a3521f;
-  --color-copper-700: #7d3f18;
+  /* Cooling blue - primary CTAs only */
+  --color-cooling: #78bfd6;
+  --color-cooling-dark: #4fa3be;
 
-  /* Ice cyan - cooling / precision */
-  --color-ice-300: #a8e6ef;
-  --color-ice-400: #7fd0dc;
-  --color-ice-500: #5cb8c7;
-  --color-ice-600: #3f93a1;
+  /* Section-background accents */
+  --color-ice: #e8f5f8;
+  --color-sage: #a8b8a3;
+  --color-sand: #ddd3c2;
+
+  /* Borders */
+  --color-border: #d8e0e4;
+
+  /* Emergency / urgent only, never decorative */
+  --color-emergency: #b94a48;
+  --color-emergency-dark: #963c3a;
 
   --radius-panel: 3px;
   --radius-control: 7px;
 
-  --shadow-panel: 0 1px 0 0 rgba(246, 240, 228, 0.04) inset, 0 12px 32px -16px rgba(0,0,0,0.55);
+  --shadow-panel: 0 1px 0 0 rgba(255, 255, 255, 0.6) inset, 0 12px 28px -18px rgba(31, 47, 58, 0.18);
 }
 
 @layer base {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
 
   body {
-    @apply bg-graphite-900 text-sand-100 font-body antialiased;
+    @apply bg-canvas text-ink font-body antialiased;
     font-feature-settings: "cv11", "ss01";
   }
 
   h1, h2, h3, h4 {
-    @apply font-display text-sand-100;
+    @apply font-display text-ink;
     letter-spacing: -0.01em;
   }
 
   ::selection {
-    background: var(--color-copper-500);
-    color: var(--color-graphite-950);
+    background: var(--color-cooling);
+    color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-ice-400);
+    outline: 2px solid var(--color-brand);
     outline-offset: 2px;
   }
 }
@@ -91,12 +87,12 @@
   }
 
   .hairline {
-    @apply border-steel-700/60;
+    @apply border-border;
   }
 
   .tick-grid {
-    background-image: linear-gradient(rgba(246,240,228,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(246,240,228,0.05) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(31, 47, 58, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 47, 58, 0.06) 1px, transparent 1px);
     background-size: 28px 28px;
   }
 }

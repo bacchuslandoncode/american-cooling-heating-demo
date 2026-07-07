@@ -17,9 +17,9 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-full font-display font-medium tracking-tight transition-transform duration-200 active:scale-[0.98] whitespace-nowrap";
 
 const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
-  primary: "bg-copper-500 text-graphite-950 hover:bg-copper-400",
-  secondary: "border border-steel-600 text-sand-100 hover:border-ice-400 hover:text-ice-300",
-  ghost: "text-sand-100 hover:text-ice-300",
+  primary: "bg-cooling text-ink hover:bg-cooling-dark",
+  secondary: "border border-border text-ink hover:border-brand hover:text-brand",
+  ghost: "text-ink hover:text-brand",
 };
 
 const sizes: Record<NonNullable<ButtonProps["size"]>, string> = {

@@ -64,11 +64,11 @@ export function SiteMap() {
       <div className="container-page grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-3 md:py-20">
         {groups.map((group) => (
           <div key={group.title}>
-            <h2 className="font-mono text-xs uppercase tracking-[0.14em] text-steel-400">{group.title}</h2>
-            <ul className="mt-4 space-y-2.5 border-t border-steel-700/60 pt-4">
+            <h2 className="font-mono text-xs uppercase tracking-[0.14em] text-muted">{group.title}</h2>
+            <ul className="mt-4 space-y-2.5 border-t border-border pt-4">
               {group.links.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-sm text-sand-200 hover:text-ice-300">
+                  <Link to={link.href} className="text-sm text-ink hover:text-brand">
                     {link.label}
                   </Link>
                 </li>

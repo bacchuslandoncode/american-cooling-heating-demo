@@ -7,7 +7,7 @@ export function PrivacyPolicy() {
     <div>
       <Breadcrumbs trail={[{ label: "Privacy Policy" }]} />
       <PageHero kicker="Legal" title="Privacy Policy" subhead="How contact information submitted through this site is handled." />
-      <div className="container-page max-w-[70ch] space-y-5 py-14 text-sm leading-relaxed text-sand-400 md:py-20">
+      <div className="container-page max-w-[70ch] space-y-5 py-14 text-sm leading-relaxed text-muted md:py-20">
         <p>
           American Cooling And Heating collects information such as name, contact details, and basic demographic
           information in order to respond to service requests and communicate with customers.

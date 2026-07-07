@@ -10,9 +10,9 @@ export function Glossary() {
       <div className="container-page py-14 md:py-20">
         <dl className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2">
           {glossary.map((g) => (
-            <div key={g.term} className="border-t border-steel-700/60 pt-4">
-              <dt className="font-display text-base font-medium text-sand-100">{g.term}</dt>
-              <dd className="mt-1.5 text-sm leading-relaxed text-sand-400">{g.definition}</dd>
+            <div key={g.term} className="border-t border-border pt-4">
+              <dt className="font-display text-base font-medium text-ink">{g.term}</dt>
+              <dd className="mt-1.5 text-sm leading-relaxed text-muted">{g.definition}</dd>
             </div>
           ))}
         </dl>

@@ -17,12 +17,12 @@ export function QualityGuarantee() {
         title="The Work Is Guaranteed, In Writing"
         subhead="All work is backed by clear warranty terms, not a verbal promise that's hard to hold anyone to later."
       />
-      <section className="border-b border-steel-700/60 py-14 md:py-20">
-        <div className="container-page grid grid-cols-1 gap-px overflow-hidden rounded-[3px] border border-steel-700/60 bg-steel-700/60 md:grid-cols-2">
+      <section className="border-b border-border py-14 md:py-20">
+        <div className="container-page grid grid-cols-1 gap-px overflow-hidden rounded-[3px] border border-border bg-border md:grid-cols-2">
           {items.map((w, i) => (
-            <div key={w.title} className={cn("bg-graphite-800 p-6", isOdd && i === items.length - 1 && "md:col-span-2")}>
-              <h3 className="font-display text-base font-medium text-copper-400">{w.title}</h3>
-              <p className="mt-2 max-w-[60ch] text-sm leading-relaxed text-sand-400">{w.body}</p>
+            <div key={w.title} className={cn("bg-card p-6", isOdd && i === items.length - 1 && "md:col-span-2")}>
+              <h3 className="font-display text-base font-medium text-brand">{w.title}</h3>
+              <p className="mt-2 max-w-[60ch] text-sm leading-relaxed text-muted">{w.body}</p>
             </div>
           ))}
         </div>
